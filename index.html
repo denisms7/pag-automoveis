@@ -262,11 +262,24 @@
                     telefone: {
                         required: true,
                     },
+                },
+
+                messages: {
+                    nome: 'Por favor, insira seu nome',
+                    telefone: 'Por favor, insira seu telefone'
+                },
+
+                submitHandler: function (form) {
+                    console.log(form)
+                },
+
+                invalidHandler: function (evento, validador) {
+                    let camposIncorretos = validador.numberOfInvalids()
+                    console.log(camposIncorretos)
                 }
+
             })
-
         })
-
 
     </script>
 
